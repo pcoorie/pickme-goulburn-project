@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PickMe Goulburn - Ride Sharing Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h2>PickMe Goulburn</h2>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#compare-us">Compare Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Pre-order ride share trips in Goulburn</h1>
+                <p>Reliable and affordable ride sharing service for the Goulburn community</p>
+                <div class="cta-buttons">
+                    <a class="btn btn-primary" href="#booking-widget"><i class="fas fa-car"></i> Book Now</a>
+                    <a class="btn btn-outline" href="#compare-us"><i class="fas fa-balance-scale"></i> Compare Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Widget Section -->
+    <section class="booking-widget-section" id="booking-widget">
+        <div class="container">
+            <div class="widget-container">
+                <h2>Book Your Ride</h2>
+                <p>Choose your pickup and destination to get started</p>
+                <iframe
+                    src="https://canupikme.ondelight.app/widget?image_url=https%3A%2F%2Fi.imgur.com%2F2Slf8Yi.png"
+                    allow="geolocation"
+                    width="100%"
+                    height="450"
+                    style="border: 0"
+                    title="Order now"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Simple steps to your perfect ride</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>1. Enter Destination</h3>
+                    <p>Set your pickup and drop-off locations in seconds.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>2. Choose Vehicle</h3>
+                    <p>Select from our range of vehicles based on your needs.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>3. Ride Confirmed</h3>
+                    <p>Get updates and track your driver in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose PickMe Goulburn</h2>
+                <p>Serving the Goulburn community with reliability and comfort</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safe & Secure</h3>
+                    <p>All drivers are verified and vehicles inspected for safety.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer service team is always ready to help you.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Easy Payments</h3>
+                    <p>Pay with your preferred payment method securely.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Rated Drivers</h3>
+                    <p>Book rides from highly-rated and professional drivers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pricing</h2>
+                <p>Transparent and fair pricing for all your rides</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">$1.50<span>/mile</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Standard vehicles</li>
+                        <li><i class="fas fa-check"></i> No hidden fees</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                    </ul>
+                    <button class="btn btn-outline">Choose Plan</button>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Premium</h3>
+                    <div class="price">$2.50<span>/mile</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Premium vehicles</li>
+                        <li><i class="fas fa-check"></i> No hidden fees</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                        <li><i class="fas fa-check"></i> Priority booking</li>
+                    </ul>
+                    <button class="btn btn-primary">Choose Plan</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Business</h3>
+                    <div class="price">$3.00<span>/mile</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Executive vehicles</li>
+                        <li><i class="fas fa-check"></i> No hidden fees</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                        <li><i class="fas fa-check"></i> Corporate discounts</li>
+                    </ul>
+                    <button class="btn btn-outline">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>We're here to help you with any questions about our services.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Ride Street, Goulburn NSW</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+61 412 345 678</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@pickme-goulburn.com.au</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compare Us Section -->
+    <section class="compare-us" id="compare-us">
+        <div class="compare-wide">
+            <div class="section-header">
+                <h2>Compare Us</h2>
+            </div>
+            <div class="compare-table-wrap">
+                <table class="compare-table">
+                    <thead>
+                        <tr><th scope="col">Features you've been asking for</th><th scope="col">PickMe</th><th scope="col">Uber</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Reserve your pick up time and day (up to 30 days in advance)</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>Child seat available on request</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>Choice of lady driver</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>No Credit Card pre-payment required</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>Ride Pooling with split payments (in Goulburn)</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>Pricing is up to 10% better than others for local trips</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>We don't do &quot;surge&quot; pricing when things get busy</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>Drivers don't pay 27.5% fees to an off-shore US corporation</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>All Drivers hold a current NSW Police Background Check</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td></tr>
+                        <tr><td>PickMeApp Goulburn is fair to drivers (Drivers keep 90% of each fare)</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>We are not a faceless $134 billion global technology business</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>We don't use generative AI chatbots to fake human support</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>Payment options are Card, Cash or AfterPay</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="no"><i class="fas fa-xmark" aria-label="No"></i></td></tr>
+                        <tr><td>We are a registered booking provider with the NSW Point to Point Transport Commission</td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td><td class="yes"><i class="fas fa-check" aria-label="Yes"></i></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="compare-cta">
+                <a class="btn btn-primary" href="#booking-widget"><i class="fas fa-car"></i> Book Your Ride</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>PickMe Goulburn</h3>
+                    <p>Smart rides for smart people</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#compare-us">Compare Us</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PickMe Goulburn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
