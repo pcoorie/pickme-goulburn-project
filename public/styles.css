@@ -801,3 +801,8 @@ a.btn { display: inline-block; text-decoration: none; }
 .store-badges a:hover { transform: translateY(-2px); }
 .contact-item a { color: inherit; text-decoration: underline; }
 .footer-bottom p { text-align: center; }
+
+/* Footer banner + email */
+.footer-banner { display: block; width: 100%; max-width: 828px; height: auto; margin: 20px auto 0; background: #fff; padding: 10px 16px; border-radius: 10px; box-sizing: border-box; }
+.footer-email { margin-top: 16px; }
+.footer-email a { color: inherit; text-decoration: underline; }
