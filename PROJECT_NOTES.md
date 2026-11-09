@@ -6,9 +6,9 @@ This is a complete redesign of the PickMe Goulburn ride-sharing website with a d
 ## Files Created/Modified
 
 ### Main Files:
-1. **`index.html`** - Main landing page with embedded booking widget
-2. **`styles.css`** - Dark blue, grey, and black theme styling
-3. **`main.js`** - JavaScript functionality and animations
+1. **`public/index.html`** - Main landing page with embedded booking widget
+2. **`public/styles.css`** - Dark blue, grey, and black theme styling
+3. **`public/main.js`** - JavaScript functionality and animations
 
 
 ## Key Features Implemented
@@ -57,7 +57,15 @@ This is a complete redesign of the PickMe Goulburn ride-sharing website with a d
 - Scroll animations for content sections
 - Dynamic behavior for booking widget
 
-## Deployment Instructions
+## Deployment (Cloudflare Pages)
+
+Site files live in `public/`. Cloudflare Pages is connected to this GitHub repo: no build command, output directory `public`. Every push to `main` deploys. Domain: canupikme.com.au (DNS on Cloudflare).
+
+## Local preview
+
+Open `public/index.html` in a browser.
+
+## Old deployment notes (superseded)
 
 1. Place all files in the same directory
 2. Open `index.html` in any modern web browser
