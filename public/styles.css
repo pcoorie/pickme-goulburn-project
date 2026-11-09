@@ -790,3 +790,14 @@ a.btn { display: inline-block; text-decoration: none; }
 .pricing-card ul.rates li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 8px 0; text-align: left; }
 .pricing-card ul.rates li span { color: var(--grey-600); }
 .pricing-card ul.rates li strong { font-size: 1.15rem; color: var(--primary-blue); white-space: nowrap; }
+
+/* Get the app */
+.get-app { padding: 60px 0; text-align: center; background-color: var(--white); }
+.get-app h2 { font-size: 2rem; margin-bottom: 10px; color: var(--grey-900); }
+.get-app p { color: var(--grey-600); margin-bottom: 24px; }
+.store-badges { display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+.store-badges img { height: 48px; width: auto; display: block; }
+.store-badges a { transition: transform 0.2s ease; }
+.store-badges a:hover { transform: translateY(-2px); }
+.contact-item a { color: inherit; text-decoration: underline; }
+.footer-bottom p { text-align: center; }
