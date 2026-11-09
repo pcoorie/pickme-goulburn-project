@@ -784,3 +784,9 @@ a.btn { display: inline-block; text-decoration: none; }
 .compare-table tr:last-child td { border-bottom: none; }
 .compare-table tbody tr:hover { background: var(--grey-100); }
 .compare-table td i { font-size: 1.15rem; }
+
+/* Pricing: rate list */
+.pricing-card ul.rates { margin: 0 0 20px; padding: 0 0 16px; border-bottom: 1px solid var(--grey-300); }
+.pricing-card ul.rates li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 8px 0; text-align: left; }
+.pricing-card ul.rates li span { color: var(--grey-600); }
+.pricing-card ul.rates li strong { font-size: 1.15rem; color: var(--primary-blue); white-space: nowrap; }
