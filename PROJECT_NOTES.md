@@ -57,9 +57,9 @@ This is a complete redesign of the PickMe Goulburn ride-sharing website with a d
 - Scroll animations for content sections
 - Dynamic behavior for booking widget
 
-## Deployment (Cloudflare Pages)
+## Deployment (GitHub Actions -> Cloudflare Pages)
 
-Site files live in `public/`. Cloudflare Pages is connected to this GitHub repo: no build command, output directory `public`. Every push to `main` deploys. Domain: canupikme.com.au (DNS on Cloudflare).
+Site files live in `public/`. `.github/workflows/deploy.yml` deploys `public/` to the Cloudflare Pages project `canupikme` on every push to `main` (also runnable manually from the Actions tab). Required repo secrets: `CLOUDFLARE_API_TOKEN` (Pages: Edit) and `CLOUDFLARE_ACCOUNT_ID`. Domain: canupikme.com.au (DNS on Cloudflare, registered with AWS Route 53).
 
 ## Local preview
 
