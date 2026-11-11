@@ -306,13 +306,7 @@ body {
     color: #1e40af;
 }
 
-/* How It Works */
-
-.how-it-works {
-    padding: 80px 0;
-    background-color: var(--white);
-}
-
+/* Section headers (shared) */
 .section-header {
     text-align: center;
     margin-bottom: 60px;
@@ -327,53 +321,6 @@ body {
 .section-header p {
     color: var(--grey-600);
     font-size: 1.1rem;
-}
-
-.steps {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.step {
-    flex: 1;
-    min-width: 250px;
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 12px;
-    transition: var(--transition);
-    background-color: rgba(249, 250, 251, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-}
-
-.step:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow);
-    background-color: rgba(249, 250, 251, 0.9);
-}
-
-.step-icon {
-    width: 80px;
-    height: 80px;
-    background-color: var(--blue-strong);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    color: var(--white);
-    font-size: 2rem;
-}
-
-.step h3 {
-    color: var(--grey-900);
-    margin-bottom: 15px;
-}
-
-.step p {
-    color: var(--grey-600);
 }
 
 /* Features */
@@ -465,6 +412,12 @@ body {
     margin-top: auto;
 }
 
+.booking-widget-section .service-area {
+    font-size: 0.95rem;
+    color: var(--grey-600);
+    margin-top: 4px;
+}
+
 .pricing-example {
     text-align: center;
     margin-top: 28px;
@@ -500,6 +453,7 @@ body {
 /* Footer */
 
 .footer {
+    border-top: 1px solid var(--grey-300);
     background-color: var(--white);
     color: var(--grey-900);
     padding: 60px 0 30px;
@@ -553,9 +507,6 @@ body {
         font-size: 2.5rem;
     }
 
-    .steps {
-        justify-content: center;
-    }
 
     .pricing-cards {
         justify-content: center;
@@ -651,10 +602,6 @@ body {
         font-size: 2rem;
     }
 
-    .steps {
-        flex-direction: column;
-        align-items: center;
-    }
 
     .pricing-cards {
         flex-direction: column;
@@ -799,6 +746,74 @@ a.btn { display: inline-block; text-decoration: none; }
 .footer-email { margin-top: 16px; }
 
 .footer-email a { display: inline-block; padding: 12px 8px; color: inherit; text-decoration: underline; }
+
+/* FAQ */
+.faq {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid var(--grey-300);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--grey-300);
+}
+
+.faq-item summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    min-height: 56px;
+    padding: 14px 4px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--grey-900);
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '';
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--blue-text);
+    border-bottom: 2px solid var(--blue-text);
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(-135deg);
+}
+
+.faq-item summary:hover {
+    color: var(--blue-text);
+}
+
+.faq-item summary:focus-visible {
+    outline: 3px solid var(--blue-strong);
+    outline-offset: 2px;
+}
+
+.faq-answer {
+    padding: 0 4px 20px;
+    color: var(--grey-600);
+}
+
+.faq-answer a {
+    color: var(--blue-text);
+    text-decoration: underline;
+}
 
 /* Inline SVG icons (replaces Font Awesome webfont) */
 
