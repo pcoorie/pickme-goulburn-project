@@ -1,3 +1,23 @@
+/* Inter (variable, latin) - self-hosted. SIL Open Font License 1.1 */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('fonts/inter-latin-var.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Metric-matched fallback so text doesn't jump when Inter loads */
+@font-face {
+    font-family: 'Inter Fallback';
+    src: local('Arial');
+    size-adjust: 107.4%;
+    ascent-override: 90.2%;
+    descent-override: 22.5%;
+    line-gap-override: 0%;
+}
+
 /* Base Styles */
 :root {
     --primary-blue: #3b82f6;
@@ -5,6 +25,9 @@
     --darker-blue: #1e3a8a;
     --medium-blue: #3b82f6;
     --light-blue: #93c5fd;
+    --blue-text: #1d4ed8;   /* AA-contrast blue for text on light backgrounds (6.7:1) */
+    --blue-strong: #2563eb; /* AA-contrast fill behind white text (5.2:1) */
+    --green-icon: #059669;
     --grey-50: #f9fafb;
     --grey-100: #f9fafb;
     --grey-200: #f3f4f6;
@@ -30,7 +53,7 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: var(--grey-800);
     background-color: var(--grey-100);
@@ -56,7 +79,7 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--primary-blue);
+    background-color: var(--blue-strong);
     color: var(--white);
 }
 
@@ -68,12 +91,12 @@ body {
 
 .btn-outline {
     background-color: transparent;
-    color: var(--primary-blue);
+    color: var(--blue-text);
     border: 2px solid var(--primary-blue);
 }
 
 .btn-outline:hover {
-    background-color: var(--primary-blue);
+    background-color: var(--blue-strong);
     color: var(--white);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
@@ -97,9 +120,11 @@ body {
     padding: 20px 0;
 }
 
-.logo h2 {
-    color: var(--primary-blue);
+.logo-text {
+    color: var(--blue-text);
     font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
 }
 
 .nav ul {
@@ -121,7 +146,7 @@ body {
 }
 
 .nav ul li a:hover {
-    color: var(--primary-blue);
+    color: var(--blue-text);
     background-color: rgba(59, 130, 246, 0.1);
 }
 
@@ -138,7 +163,7 @@ body {
     background: transparent;
     border: none;
     border-radius: 8px;
-    color: var(--primary-blue);
+    color: var(--blue-text);
     font-size: 1.5rem;
     cursor: pointer;
     transition: var(--transition);
@@ -166,7 +191,20 @@ body {
     padding: 2rem 1rem;
     margin-top: 70px;
     margin-bottom: 2rem;
-    background: url('https://goulburnnsw.com.au/wp-content/uploads/6ed5a1bb4b4edfadb744ab30f2cfefe6_The_Big_Merino_-sky-scaled-1.jpg') center/cover no-repeat fixed;
+    background: url('images/hero-1280.jpg') center/cover no-repeat fixed;
+    background-image: image-set(url('images/hero-1280.webp') type('image/webp'), url('images/hero-1280.jpg') type('image/jpeg'));
+}
+
+@media (max-width: 600px) {
+    .hero {
+        background-image: image-set(url('images/hero-800.webp') type('image/webp'), url('images/hero-1280.jpg') type('image/jpeg'));
+    }
+}
+
+@media (min-width: 1281px) {
+    .hero {
+        background-image: image-set(url('images/hero-1920.webp') type('image/webp'), url('images/hero-1280.jpg') type('image/jpeg'));
+    }
 }
 
 .hero-overlay {
@@ -283,7 +321,7 @@ body {
 .step-icon {
     width: 80px;
     height: 80px;
-    background-color: var(--primary-blue);
+    background-color: var(--blue-strong);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -338,9 +376,9 @@ body {
     background-color: rgba(249, 250, 251, 0.9);
 }
 
-.feature-card i {
+.feature-card .icon {
     font-size: 3rem;
-    color: var(--primary-blue);
+    color: var(--blue-text);
     margin-bottom: 20px;
 }
 
@@ -398,7 +436,7 @@ body {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--primary-blue);
+    background-color: var(--blue-strong);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -410,7 +448,7 @@ body {
     font-size: 2.75rem;
     font-weight: 700;
     line-height: 1.1;
-    color: var(--primary-blue);
+    color: var(--blue-text);
     margin-bottom: 24px;
 }
 
@@ -436,7 +474,7 @@ body {
 .price {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: var(--blue-text);
     margin-bottom: 25px;
 }
 
@@ -460,8 +498,8 @@ body {
     border-bottom: none;
 }
 
-.pricing-card ul li i {
-    color: #10b981;
+.pricing-card ul li .icon {
+    color: var(--green-icon);
     margin-right: 10px;
 }
 
@@ -504,8 +542,8 @@ body {
     gap: 15px;
 }
 
-.contact-item i {
-    color: var(--primary-blue);
+.contact-item .icon {
+    color: var(--blue-text);
     font-size: 1.2rem;
 }
 
@@ -534,13 +572,13 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-blue);
+    border-color: var(--blue-text);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: var(--grey-500);
+    color: var(--grey-600);
 }
 
 /* Footer */
@@ -559,7 +597,7 @@ body {
 }
 
 .footer-logo h3 {
-    color: var(--primary-blue);
+    color: var(--blue-text);
     margin-bottom: 15px;
 }
 
@@ -582,7 +620,7 @@ body {
 }
 
 .footer-links ul li a:hover {
-    color: var(--primary-blue);
+    color: var(--blue-text);
     padding-left: 5px;
 }
 
@@ -604,7 +642,7 @@ body {
 }
 
 .social-links a:hover {
-    background-color: var(--primary-blue);
+    background-color: var(--blue-strong);
     color: white;
     transform: translateY(-3px);
 }
@@ -771,12 +809,12 @@ body {
     border-bottom: none;
 }
 
-.comparison-card h3 i {
+.comparison-card h3 .icon {
     margin-right: 10px;
 }
 
-.comparison-card .fa-check-circle {
-    color: #10b981;
+.comparison-card .icon-check {
+    color: var(--green-icon);
 }
 
 /* Comparison Table */
@@ -798,7 +836,7 @@ table {
 }
 
 thead {
-    background-color: var(--primary-blue);
+    background-color: var(--blue-strong);
     color: var(--white);
 }
 
@@ -826,11 +864,11 @@ td:first-child {
     font-weight: 500;
 }
 
-.fa-check-circle {
-    color: #10b981;
+.icon-check {
+    color: var(--green-icon);
 }
 
-.fa-times-circle {
+.icon-cross {
     color: #ef4444;
 }
 
@@ -859,10 +897,10 @@ td:first-child {
     box-shadow: var(--shadow-lg);
 }
 
-.feature-card i {
+.feature-card .icon {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: var(--primary-blue);
+    color: var(--blue-text);
 }
 
 .feature-card h3 {
@@ -877,7 +915,7 @@ td:first-child {
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 .compare-cta { text-align: center; margin-top: 40px; }
-.comparison-card .fa-times-circle { color: #ef4444; }
+.comparison-card .icon-cross { color: #ef4444; }
 a.btn { display: inline-block; text-decoration: none; }
 
 /* Compare Us: full-width table */
@@ -888,21 +926,21 @@ a.btn { display: inline-block; text-decoration: none; }
 .compare-table thead th { background: var(--dark-blue); color: var(--white); font-size: 1.1rem; }
 .compare-table thead th:not(:first-child), .compare-table td.yes, .compare-table td.no, .compare-table td.na { text-align: center; width: 140px; }
 .compare-table tr.group th { background: var(--grey-200); color: var(--dark-blue); font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; }
-.compare-table td.yes { color: #10b981; } .compare-table td.no { color: #ef4444; } .compare-table td.na { color: var(--grey-500); }
-.compare-table td i { font-size: 1.3rem; }
+.compare-table td.yes { color: var(--green-icon); } .compare-table td.no { color: #ef4444; } .compare-table td.na { color: var(--grey-500); }
+.compare-table td .icon { font-size: 1.3rem; }
 @media (max-width: 600px) { .compare-table th, .compare-table td { padding: 10px 10px; font-size: .95rem; } .compare-table thead th:not(:first-child), .compare-table td.yes, .compare-table td.no, .compare-table td.na { width: 70px; } }
 
 /* Compare table: match canupikme.com.au/compare (flat list, thin icons) */
 .compare-table tr:last-child td { border-bottom: none; }
 .compare-table tbody tr:nth-child(even) { background: #eef0f3; }
 .compare-table tbody tr:hover { background: #e5e8ec; }
-.compare-table td i { font-size: 1.15rem; }
+.compare-table td .icon { font-size: 1.15rem; }
 
 /* Pricing: rate list */
 .pricing-card ul.rates { margin: 0 0 20px; padding: 0 0 16px; border-bottom: 1px solid var(--grey-300); }
 .pricing-card ul.rates li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 8px 0; text-align: left; }
 .pricing-card ul.rates li span { color: var(--grey-600); }
-.pricing-card ul.rates li strong { font-size: 1.15rem; color: var(--primary-blue); white-space: nowrap; }
+.pricing-card ul.rates li strong { font-size: 1.15rem; color: var(--blue-text); white-space: nowrap; }
 
 /* Get the app */
 .get-app { padding: 60px 0; text-align: center; background-color: var(--white); }
@@ -919,3 +957,57 @@ a.btn { display: inline-block; text-decoration: none; }
 .footer-banner { display: block; width: 100%; max-width: 828px; height: auto; margin: 20px auto 0; background: #fff; padding: 10px 16px; border-radius: 10px; box-sizing: border-box; }
 .footer-email { margin-top: 16px; }
 .footer-email a { color: inherit; text-decoration: underline; }
+
+/* Inline SVG icons (replaces Font Awesome webfont) */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
+}
+
+/* Accessibility */
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: -100px;
+    z-index: 2000;
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 0 0 8px 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+iframe:focus-visible {
+    outline: 3px solid var(--blue-strong);
+    outline-offset: 3px;
+}
+
+.hero a:focus-visible {
+    outline-color: var(--white);
+}
+
+[tabindex="-1"]:focus {
+    outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+    .hero {
+        background-attachment: scroll;
+    }
+}

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         header.classList.toggle('menu-open', open);
         menuToggle.setAttribute('aria-expanded', String(open));
         menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        menuToggle.querySelector('i').className = open ? 'fas fa-times' : 'fas fa-bars';
+        menuToggle.querySelector('use').setAttribute('href', open ? '#i-xmark' : '#i-bars');
     }
     menuToggle.addEventListener('click', () => setMenu(!header.classList.contains('menu-open')));
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
             history.pushState(null, '', this.getAttribute('href'));
+            // Move keyboard/screen-reader focus to the target section
+            if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+            target.focus({ preventScroll: true });
         });
     });
 
