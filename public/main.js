@@ -70,16 +70,4 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         pricingCardsObserver.observe(card);
     });
-
-    // Hero section animation
-    const heroContent = document.querySelector('.hero-text');
-    if (heroContent) {
-        heroContent.style.opacity = 0;
-        heroContent.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-            heroContent.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            heroContent.style.opacity = 1;
-            heroContent.style.transform = 'translateY(0)';
-        }, 300);
-    }
 });
