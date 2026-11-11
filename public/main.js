@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && header.classList.contains('menu-open')) { setMenu(false); menuToggle.focus(); }
     });
-    window.matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+    window.matchMedia('(min-width: 993px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
 
     // Smooth scrolling for in-page links (offset handled by CSS scroll-padding-top)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

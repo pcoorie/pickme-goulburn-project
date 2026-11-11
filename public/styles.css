@@ -611,12 +611,6 @@ body {
         flex-direction: column;
     }
     
-    .nav ul {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
     .header .container {
         flex-wrap: wrap;
         padding: 10px 0;
@@ -637,6 +631,7 @@ body {
     }
 
     .nav ul {
+        display: flex;
         flex-direction: column;
     }
 
@@ -650,6 +645,14 @@ body {
         min-height: 48px;
         font-size: 1.05rem;
     }
+
+    /* background-attachment: fixed is unsupported on iOS/most mobile browsers */
+    .hero {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 768px) {
     
     .hero-text h1 {
         font-size: 2rem;
@@ -868,7 +871,8 @@ a.btn { display: inline-block; text-decoration: none; }
 
 /* Compare table: match canupikme.com.au/compare (flat list, thin icons) */
 .compare-table tr:last-child td { border-bottom: none; }
-.compare-table tbody tr:hover { background: var(--grey-100); }
+.compare-table tbody tr:nth-child(even) { background: #eef0f3; }
+.compare-table tbody tr:hover { background: #e5e8ec; }
 .compare-table td i { font-size: 1.15rem; }
 
 /* Pricing: rate list */
