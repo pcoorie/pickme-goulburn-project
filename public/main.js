@@ -1,10 +1,21 @@
-// Mobile menu toggle
-const mobileMenuButton = document.createElement('button');
-mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
-mobileMenuButton.classList.add('menu-toggle');
-
-// Add mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('primary-nav');
+    const header = document.querySelector('.header');
+    function setMenu(open) {
+        header.classList.toggle('menu-open', open);
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        menuToggle.querySelector('i').className = open ? 'fas fa-times' : 'fas fa-bars';
+    }
+    menuToggle.addEventListener('click', () => setMenu(!header.classList.contains('menu-open')));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && header.classList.contains('menu-open')) { setMenu(false); menuToggle.focus(); }
+    });
+    window.matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+
     // Smooth scrolling for in-page links (offset handled by CSS scroll-padding-top)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -16,17 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Header scroll effect
+    // Header scroll effect (shadow only; colours come from CSS)
     window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 100) {
-            header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)';
-            header.style.backgroundColor = 'rgba(15, 23, 42, 0.95)';
-        } else {
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
-            header.style.backgroundColor = 'rgba(15, 23, 42, 0.95)';
-        }
-    });
+        header.classList.toggle('scrolled', window.scrollY > 100);
+    }, { passive: true });
 
     // Pricing card hover effect
     const pricingCards = document.querySelectorAll('.pricing-card');
