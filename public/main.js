@@ -32,22 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         header.classList.toggle('scrolled', window.scrollY > 100);
     }, { passive: true });
 
-    // Pricing card hover effect
-    const pricingCards = document.querySelectorAll('.pricing-card');
-    pricingCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            if (!this.classList.contains('popular')) {
-                this.style.transform = 'scale(1.05)';
-            }
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            if (!this.classList.contains('popular')) {
-                this.style.transform = 'scale(1)';
-            }
-        });
-    });
-
     // Add animation to feature cards on scroll
     const featureCards = document.querySelectorAll('.feature-card');
     

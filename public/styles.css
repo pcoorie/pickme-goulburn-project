@@ -5,6 +5,7 @@
     --darker-blue: #1e3a8a;
     --medium-blue: #3b82f6;
     --light-blue: #93c5fd;
+    --grey-50: #f9fafb;
     --grey-100: #f9fafb;
     --grey-200: #f3f4f6;
     --grey-300: #e5e7eb;
@@ -355,41 +356,41 @@ body {
 /* Pricing */
 .pricing {
     padding: 80px 0;
-    background-color: var(--white);
+    background-color: var(--grey-50);
 }
 
 .pricing-cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
     gap: 30px;
+    max-width: 860px;
+    margin: 0 auto;
 }
 
 .pricing-card {
     flex: 1;
     min-width: 280px;
+    display: flex;
+    flex-direction: column;
     border-radius: 12px;
-    padding: 40px 30px;
+    padding: 40px 30px 30px;
     text-align: center;
     box-shadow: var(--shadow);
     position: relative;
-    background-color: rgba(249, 250, 251, 0.7);
+    background-color: var(--white);
     transition: var(--transition);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    border: 1px solid var(--grey-300);
 }
 
 .pricing-card:hover {
-    transform: scale(1.05);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-card.popular {
     border: 2px solid var(--primary-blue);
-    transform: scale(1.05);
-}
-
-.pricing-card.popular:hover {
-    transform: scale(1.05);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
 }
 
 .popular-badge {
@@ -403,6 +404,28 @@ body {
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+.pricing-card .fare {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--primary-blue);
+    margin-bottom: 24px;
+}
+
+.pricing-card .fare span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--grey-600);
+    margin-bottom: 4px;
+}
+
+.pricing-card .btn {
+    margin-top: auto;
 }
 
 .pricing-card h3 {
@@ -424,7 +447,7 @@ body {
 
 .pricing-card ul {
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 .pricing-card ul li {
